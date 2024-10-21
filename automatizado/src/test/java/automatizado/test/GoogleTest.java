@@ -5,12 +5,14 @@ import automatizado.pageObject.GooglePO;
 
 
 
-public class GoogleTest extends BateTest {
+public class GoogleTest extends BaseTest {
 
     private static GooglePO googlePage;
     @BeforeClass
     public static void prepararTeste(){
+        driver.get("https://www.google.com/");
         googlePage = new GooglePO(driver);
+        
     }
     @Test      //TC001 = TestCase001
     public void TC001_deveSerPossivelPesquisarNoGoogleOTextoSorvete(){

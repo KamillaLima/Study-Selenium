@@ -17,7 +17,7 @@ public abstract class BasePO {
      * Construtor base para criação da fabrica de elementos (PageFactory).
      * @param driver  Driver da página atual.
      */
-    protected BasePO(WebDriver driver){
+    public BasePO(WebDriver driver){
         this.driver = driver;
         //O driver dessa classe (ali da linha 14) vai receber o driver
         //que está vindo como parâmetro
