@@ -28,8 +28,9 @@ public abstract class BaseTest {
 
     //AfterClass : Depois de finalizar todos os métodos de teste, o afterClass
     //é chamado por final
-    @AfterClass
+   /**  @AfterClass
     public static void finalizar(){
         driver.quit();
     }
+        */
 }

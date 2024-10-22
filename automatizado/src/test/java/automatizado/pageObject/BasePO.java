@@ -1,6 +1,8 @@
 package automatizado.pageObject;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -31,5 +33,13 @@ public abstract class BasePO {
         //as infos estão todas corretas. Ele vai pegar o titulo da página para ver se 
         //quando as infos foram informadas corretamente, o usuário foi mandado para a página
         //de cadastro de produtos
+    }
+
+        public void escrever(WebElement input,String texto){
+        input.clear();
+        //para não ter o risco de já ter alguma informação ali dentro do meu campo
+        input.sendKeys(texto + Keys.TAB);
+        //Com esse método escrever , independente de qual seja o input
+        // que eu queira mudar,eu vou conseguir
     }
 }

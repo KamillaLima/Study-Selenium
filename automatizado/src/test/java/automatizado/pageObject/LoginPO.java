@@ -26,14 +26,6 @@ public class LoginPO extends BasePO {
         return spanMensagem.getText();
     }
 
-    public void escrever(WebElement input,String texto){
-        input.clear();
-        //para não ter o risco de já ter alguma informação ali dentro do meu campo
-        input.sendKeys(texto + Keys.TAB);
-        //Com esse método escrever , independente de qual seja o input
-        // que eu queira mudar,eu vou conseguir
-    }
-
     public void executarAcaoDeLogar(String email,String senha){
         escrever(inputEmail, email);
         escrever(inputSenha, senha);
