@@ -23,4 +23,13 @@ public abstract class BasePO {
         //que está vindo como parâmetro
         PageFactory.initElements(driver, this);
     }
+
+
+    public String obterTituloDaPagina(){
+        return driver.getTitle();
+        //Esse método será usado para ver se ele está fazendo o login corretamente quando
+        //as infos estão todas corretas. Ele vai pegar o titulo da página para ver se 
+        //quando as infos foram informadas corretamente, o usuário foi mandado para a página
+        //de cadastro de produtos
+    }
 }
